@@ -18,7 +18,6 @@ function sortProducts(array, field, order) {
         return order == "asc" ? comparator : -comparator;
     });
 
-    console.log(sortedArray);
     return sortedArray;
 }
 

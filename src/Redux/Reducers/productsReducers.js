@@ -49,7 +49,6 @@ export const getProductsReducer = createReducer(initialState, (builder)=>{
             const classes = haveClass.map(e => e.class)
             const classesWithoutRepeated = [...new Set(classes)]
 
-            console.log("action")
             return {
                 ...store,
                 productsByCategory: sortedArray,
