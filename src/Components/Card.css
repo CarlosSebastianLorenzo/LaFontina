@@ -38,7 +38,7 @@
     justify-content: space-between;
     z-index: 1;
     background: var(--primary-color);
-    gap: .5rem;
+    gap: .2em;
 }
 .card:hover div:first-child{
     scale: 1.3;

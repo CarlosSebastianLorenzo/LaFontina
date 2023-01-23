@@ -89,3 +89,15 @@ ul{
 button{
   cursor: pointer;
 }
+.icon{
+  z-index: 1;
+  cursor: pointer;
+  filter: drop-shadow(2px 2px 4px #33333360);
+  transition: .5s ease;
+}
+.icon:hover{
+  scale: 1.5;
+}
+.icon:active{
+  scale: .9;
+}

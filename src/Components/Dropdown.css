@@ -47,7 +47,8 @@
     transition: .5s ease;
 }
 .options li:hover{
-    background: var(--accent);
+    background: var(--primary-color);
+    color: var(--bg-color);
     cursor: pointer;
 }
 .options li:first-child:hover{
