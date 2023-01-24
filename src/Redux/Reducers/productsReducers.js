@@ -22,23 +22,29 @@ export const getProductsReducer = createReducer(initialState, (builder)=>{
             }
         })
         .addCase(getProducts.fulfilled,(store,action)=>{
+
             let array = action.payload.array
             const filteredArray = array.filter(e => e.category.title == action.payload.category)
+
+            const sortedArray = sortProducts(filteredArray, "Precio", "asc")
+
             const haveClass = filteredArray.filter(e => e.class)
             const classes = haveClass.map(e => e.class)
             const classesWithoutRepeated = [...new Set(classes)]
-            console.log("asyncthunk")
 
             return {
                 ...store,
                 allProducts: array,
-                productsByCategory: filteredArray,
-                filteredProducts: filteredArray,
+                productsByCategory: sortedArray,
+                filteredProducts: sortedArray,
                 productClasses : classesWithoutRepeated
             }
         })
         .addCase(productsByCategory, (store,action)=>{
             const filteredArray = store.allProducts.filter(e => e.category.title == action.payload.category)
+
+            const sortedArray = sortProducts(filteredArray, "Precio", "asc")
+
             const haveClass = filteredArray.filter(e => e.class)
             const classes = haveClass.map(e => e.class)
             const classesWithoutRepeated = [...new Set(classes)]
@@ -46,8 +52,8 @@ export const getProductsReducer = createReducer(initialState, (builder)=>{
             console.log("action")
             return {
                 ...store,
-                productsByCategory: filteredArray,
-                filteredProducts: filteredArray,
+                productsByCategory: sortedArray,
+                filteredProducts: sortedArray,
                 productClasses : classesWithoutRepeated
             }
         })
