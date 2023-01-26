@@ -30,7 +30,7 @@
 }
 .products>div:has(input[type="text"]){
     display: flex;
-    gap: 0.5rem;
+    gap: .5em;
     white-space: nowrap;
     justify-content: center;
     flex-direction: column;
@@ -90,4 +90,9 @@
 }
 .selected:hover{
     background: #999;
+}
+@media (min-width: 370px) and (max-width: 562px) {
+    .products div:has(>input[type="text"]) label{
+        translate: 35%;
+    }
 }

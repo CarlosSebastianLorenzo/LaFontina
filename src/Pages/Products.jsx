@@ -6,6 +6,7 @@ import Card from "../Components/Card"
 import { useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { getProducts, productsByCategory, filterProductsAction } from '../Redux/Actions/productsActions.js'
+import Dropdown from '../Components/Dropdown'
 
 const Products = () => {
 
@@ -48,6 +49,7 @@ const Products = () => {
                 <div>
                     <input ref={search} type="text" name="search" placeholder=" " onChange={filterProducts}/>
                     <label htmlFor="search">Filtra por Ingredientes</label>
+                    <Dropdown/>
                 </div>
                 <div>
                     <button className={classesSelected.length === 0 ? "selected category" : "category"} 
