@@ -54,3 +54,11 @@
         font-size: 2.5rem;
     }
 }
+@media (max-width: 500px) {
+    .titleBanner{
+        font-size: 3rem;
+    }
+    .button{
+        font-size: 2rem;
+    }
+}

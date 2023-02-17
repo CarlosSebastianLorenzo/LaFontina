@@ -19,7 +19,7 @@ const Hero = () => {
                     return(
                         <div className="banner" key={i} style={{backgroundImage: `url(${element})`, display: 'flex', alignItems: 'center', justifyContent:'center'}}>
                             <h1 className="titleBanner">Regalate una Picada</h1>
-                            <Link to='/Promos' className='button'>PEDI HOY<RxDoubleArrowRight size='3rem'/></Link>
+                            <Link to='/Picadas' className='button'>PEDI HOY<RxDoubleArrowRight size='3rem'/></Link>
                         </div>
                     )
                 })}
