@@ -51,6 +51,7 @@ div:has(>.burguer){
         padding-top: 4rem;
         flex-direction: column;
         transition: 3 ease;
+        max-height: 100%;
     }
     nav a{
         color: #fff;

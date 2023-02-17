@@ -37,6 +37,7 @@ header>ul>li>a{
     header{
         flex-direction: column;
         height: 17vh;
+        min-height: 6rem;
     }
     header>ul{
         height: 7vh;
