@@ -2,4 +2,8 @@ footer{
     min-height: 10vh;
     display: flex;
     justify-content: center;
+    padding: 1rem;
+}
+.map{
+    border-radius: 25px;
 }

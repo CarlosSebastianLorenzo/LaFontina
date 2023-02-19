@@ -11,7 +11,6 @@ const MainLayout = () => {
             <Header/>
             <Nav/>
             <Outlet/>
-            
             <Link className='whatsapp' target='_blank' to='https://api.whatsapp.com/send?phone=5493515081999&text='><BsWhatsapp/></Link>
             <Footer/>
         </>

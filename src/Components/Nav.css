@@ -41,10 +41,14 @@ div:has(>.burguer){
     .navShown{
         width: 375px;
     }
+    nav{
+        align-items: flex-start;
+    }
     nav>ul{
         flex-wrap: nowrap;  
         align-items: center;
-        padding-top: 10rem;
+        justify-content: flex-start;
+        padding-top: 4rem;
         flex-direction: column;
         transition: 3 ease;
     }

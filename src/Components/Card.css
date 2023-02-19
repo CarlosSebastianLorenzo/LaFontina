@@ -10,21 +10,29 @@
     box-shadow: 4px 4px 4px #33333333;
     overflow: hidden;
     transition: .3s ease-in-out;
+    position: relative;
 }
 .card:hover{
     box-shadow: 4px 4px 14px var(--primary-color);
 }
 .card>div:first-child{
-    height: 60%;
+    background-color: var(--secondary-color);
+    height: 65%;
     width: 100%;
     background-size: cover;
     border-radius: 25px 25px 0 0;
     transition: 1s ease;
-
+}
+.card>div>svg{
+    position: absolute;
+    bottom: 34%;
+    left: 0;
+    width: 100%;
 }
 .card>div:has(p){
-    height: 40%;
+    height: 35%;
     padding: 1rem;
+    padding-top: 0rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
