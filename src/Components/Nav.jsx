@@ -6,7 +6,7 @@ import BurguerMenu from './BurguerMenu'
 
 const Nav = () => {
 
-    const Items = ["promos", "picadas", "sandwiches", "quesos", "fiambres", "encurtidos", "snacks", "bebidas", "eventos"]
+    const Items = ["Promos", "Picadas", "Sandwiches", "Quesos", "Fiambres", "Encurtidos", "Snacks", "Bebidas", "Eventos"]
 
     const [navOpen, setNavOpen] = useState(false)
 

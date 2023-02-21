@@ -6,7 +6,7 @@ main{
     bottom: 5vh;
     right: 5vw;
     background: limegreen;
-    color: #ddd;
+    color: #fff;
     border-radius: 50%;
     height: 3rem;
     width: 3rem;
@@ -21,5 +21,6 @@ main{
 .whatsapp:hover{
     border: limegreen 2px solid;
     color: limegreen;
-    background: #ddd;
+    background: #fff;
+    scale: 1.8;
 }

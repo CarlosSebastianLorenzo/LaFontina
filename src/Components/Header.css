@@ -13,6 +13,10 @@ header>a{
     align-items: center;
     height: 100%;
 }
+header>a>h1:hover{
+    color: var(--primary-color);
+    transition: .5s ease;
+}
 header>a>img{
     height: 100%;
     max-height: 10vh;
@@ -22,21 +26,30 @@ header>ul{
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    font-size: 1.2rem;
 }
-header>ul>li>button{
-    padding: .5rem;
+header>ul>li>a{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
 }
-@media (max-width: 1024px){
+@media (max-width: 1060px){
     header{
         flex-direction: column;
-        height: 15vh;
+        height: 17vh;
+    }
+    header>ul{
+        height: 7vh;
     }
 }
 @media (max-width: 460px){
     header{
         align-items: flex-start;
+        font-size: small;
     }
     header>ul{
         gap: .5rem;
+        font-size:medium;
+
     }
 }

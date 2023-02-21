@@ -1,3 +1,10 @@
+nav{
+    background: var(--secondary-color);
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 nav>ul{
     display:flex;
     flex-wrap: wrap;
@@ -7,14 +14,16 @@ nav>ul{
     align-items: center;
     gap: 2rem;
 }
-li>a{
+nav>ul>li>a{
     padding-bottom: .2em;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 div:has(>.burguer){
     display: none;
 }
 
-@media (max-width: 1024px){
+@media (max-width: 1060px){
     nav{
         position: fixed;
         z-index: 3;

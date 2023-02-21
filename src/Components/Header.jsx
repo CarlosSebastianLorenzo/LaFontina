@@ -1,5 +1,6 @@
 import './Header.css'
-import { AiOutlineShoppingCart, AiOutlineWhatsApp, AiOutlinePhone } from "react-icons/ai";
+import { AiOutlineShoppingCart} from "react-icons/ai";
+import {BsTelephone, BsWhatsapp} from "react-icons/bs"
 import { Link } from 'react-router-dom'
 
 const Header = () => {
@@ -8,17 +9,23 @@ const Header = () => {
         <header>
             <Link to='/'>
                 <img src="../../public/laFontinaLogo.jpg" alt="La Fontina" />
-                <h1>La Fontina</h1>
+                <h1>LA FONTINA</h1>
             </Link>
                 <ul>
                     <li>
-                        <Link className='link' target='_blank' to="tel:+54-9-351-508-1999"><AiOutlinePhone/>351-508-1999</Link>
+                        <Link className='link' target='_blank'
+                            to="tel:+54-9-351-508-1999">
+                            <BsTelephone size='1.3rem'/> 351-508-1999
+                        </Link>
                     </li>
                     <li>
-                        <Link className='link' target='_blank' to="https://api.whatsapp.com/send?phone=5493515081999&text="><AiOutlineWhatsApp/>351-508-1999</Link>
+                        <Link className='link' target='_blank' 
+                            to="https://api.whatsapp.com/send?phone=5493515081999&text=">
+                            <BsWhatsapp size='1.3rem'/> 351-508-1999
+                        </Link>
                     </li>
                     <li>
-                        <Link to="#"><AiOutlineShoppingCart/></Link>
+                        <Link to="#"><AiOutlineShoppingCart size='2rem'/></Link>
                     </li>
                 </ul>
         </header>
