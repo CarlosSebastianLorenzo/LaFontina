@@ -1,21 +1,25 @@
 /*Carousel*/
-.slide{
+.wrapper{
     position: relative;
-    display: flex;
+    overflow-x:hidden;
     color: #fff;
-    overflow-x: hidden;
+}
+.slide{
+    display: flex;
+    transition: 2s ease-in-out;
 }
 .slide::-webkit-scrollbar{
     display: none;
 }
 .contentSlide{
-    flex-grow: 1 0 auto;
-    display: flex;
-    transition: 2s ease-in-out;
+    height: 100%;
     cursor:grab
 }
 .contentSlide:active{
     cursor: grabbing;
+}
+.contentSlide h1{
+    user-select: none;
 }
 .selectors{
     display: flex;
