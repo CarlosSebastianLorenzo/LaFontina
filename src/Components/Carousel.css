@@ -3,7 +3,7 @@
     position: relative;
     display: flex;
     color: #fff;
-    overflow: scroll;
+    overflow-x: hidden;
 }
 .slide::-webkit-scrollbar{
     display: none;
@@ -12,6 +12,10 @@
     flex-grow: 1 0 auto;
     display: flex;
     transition: 2s ease-in-out;
+    cursor:grab
+}
+.contentSlide:active{
+    cursor: grabbing;
 }
 .selectors{
     display: flex;

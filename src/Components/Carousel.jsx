@@ -8,6 +8,7 @@ const Carousel = ({children}) => {
     const [selectedIndex, setSelectedIndex] = useState(0);
     const [newArray, setNewArray] = useState([elementsArray]);
     const contentSlide = useRef(null)
+    const [isDragging, setIsDragging] = useState(false);
 
     const previous = () => {
         const condition = selectedIndex > 0;
@@ -36,13 +37,24 @@ const Carousel = ({children}) => {
             clearInterval(intervalID);
         }
     })
+    
+    const dragging = (e) => {
+        if (isDragging) {
+            setTimeout(() => {
+                e.movementX < 0 ?
+                next()
+                : previous();
+            }, 500)
+        }
+    }
 
     return (
         <div className='slide'>
             <BsChevronLeft onClick={previous} size="2rem" className="icon arrowLeft"/>
             {newArray.map((element,indexMap)=>{
                 return (
-                    <div ref={contentSlide} key={indexMap} className="contentSlide">
+                    <div  ref={contentSlide} key={indexMap} className="contentSlide"
+                    onMouseDown={()=>setIsDragging(true)} onMouseMove={dragging} onMouseUp={()=>setIsDragging(false)}>
                         {element}
                     </div>
                 )
