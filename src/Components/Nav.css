@@ -1,0 +1,9 @@
+ul{
+    display:flex;
+    flex-wrap: wrap;
+    height: 5vh;
+    font-weight: 600;
+}
+li>a{
+    padding-bottom: .2em;
+}
