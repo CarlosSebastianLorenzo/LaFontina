@@ -1,4 +1,25 @@
-header {
-    background-color: red;
-    color: #fff;
+header{
+    max-width: 1350px;
+    margin: 0 auto;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header>a{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+header>a>img{
+    height: 100%;
+}
+nav>ul, footer ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+nav>ul>li>button{
+    padding: .5rem;
 }
