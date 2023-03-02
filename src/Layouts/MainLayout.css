@@ -1,0 +1,25 @@
+main{
+    min-height: 75vh;
+}
+.whatsapp{
+    position: fixed;
+    bottom: 5vh;
+    right: 5vw;
+    background: limegreen;
+    color: #ddd;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: transparent 2px solid;
+}
+.whatsapp>*{
+    scale: 1.6;
+}
+.whatsapp:hover{
+    border: limegreen 2px solid;
+    color: limegreen;
+    background: #ddd;
+}

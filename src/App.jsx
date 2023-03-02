@@ -1,15 +1,20 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Header from './Components/Header';
-import Main from './Layouts/Main';
+import MainLayout from './Layouts/MainLayout';
+import Hero from './Pages/Hero';
+import Details from './Pages/Details';
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Main />,
+    path: '/',
+    element: <MainLayout/>,
     children: [
       {
-        path: "/",
-        element: <Header />
+        path: '/',
+        element: <Hero/>,
+      },
+      {
+        path: '/:name',
+        element: <Details/>,
       }
     ]
   },
@@ -18,7 +23,9 @@ const router = createBrowserRouter([
 function App() {
 
   return (
+    <>
     <RouterProvider router={router} />
+    </>
   )
 }
 
