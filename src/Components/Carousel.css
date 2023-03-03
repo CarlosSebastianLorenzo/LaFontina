@@ -1,0 +1,48 @@
+/*Carousel*/
+.slide{
+    position: relative;
+    display: flex;
+    color: #fff;
+    overflow: scroll;
+}
+.slide::-webkit-scrollbar{
+    display: none;
+}
+.contentSlide{
+    flex-grow: 1 0 auto;
+    display: flex;
+    transition: 2s ease-in-out;
+}
+.selectors{
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    translate: -50% 0;
+}
+.icon{
+    z-index: 1;
+    cursor: pointer;
+    filter: drop-shadow(2px 2px 4px #33333360);
+    transition: .5s ease;
+}
+.icon:hover{
+    scale: 1.5;
+}
+.icon:focus{
+    scale: .9;
+}
+.arrowRight{
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    translate: 0 -50%;
+}
+.arrowLeft{
+    position: absolute;
+    left: 1.5rem;
+    top: 50%;
+    translate: 0 -50%;
+}
