@@ -10,7 +10,6 @@ const Header = () => {
                 <img src="../../public/laFontinaLogo.jpg" alt="La Fontina" />
                 <h1>La Fontina</h1>
             </Link>
-            <nav>
                 <ul>
                     <li>
                         <Link className='link' target='_blank' to="tel:+54-9-351-508-1999"><AiOutlinePhone/>351-508-1999</Link>
@@ -22,7 +21,6 @@ const Header = () => {
                         <Link to="#"><AiOutlineShoppingCart/></Link>
                     </li>
                 </ul>
-            </nav>
         </header>
     )
 }

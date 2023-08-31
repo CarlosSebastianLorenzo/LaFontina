@@ -1,9 +1,53 @@
-ul{
+nav>ul{
     display:flex;
     flex-wrap: wrap;
     height: 5vh;
     font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
 }
 li>a{
     padding-bottom: .2em;
+}
+div:has(>.burguer){
+    display: none;
+}
+
+@media (max-width: 1024px){
+    nav{
+        position: fixed;
+        z-index: 3;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: var(--secondary-color);
+        transition: 2s ease;
+        overflow: hidden;
+    }
+    .navHidden{
+        width: 0;
+    }
+    .navShown{
+        width: 375px;
+    }
+    nav>ul{
+        flex-wrap: nowrap;  
+        align-items: center;
+        padding-top: 10rem;
+        flex-direction: column;
+        transition: 3 ease;
+    }
+    nav a{
+        color: #fff;
+        font-weight: bolder;
+        font-size: 3rem;
+    }
+    div:has(>.burguer){
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 0;
+    }
 }

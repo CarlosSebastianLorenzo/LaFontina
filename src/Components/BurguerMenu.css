@@ -1,0 +1,47 @@
+.burguer{
+    z-index: 4;
+    flex-direction: column;
+    gap: .2rem;
+    position: relative;
+    top: 1rem;
+    right: 2rem;
+    cursor: pointer;
+    height: 2.5rem;
+    width: 3rem;
+    display: none;
+}
+.burguer>span{
+    width: 3rem;
+    height: .2rem;
+    background: #111;
+    border-radius: 5px;
+    display: block;
+    position: absolute;
+    transition: 1s ease-in-out;
+}
+.burguer>span:nth-child(2){
+    top: 1rem;
+}
+.burguer>span:last-child{
+    top: 2rem;
+}
+.burguerTop{
+    transform: translateY(1rem) rotate(135deg);
+}
+.burguerMiddle{
+    transform: rotate(45deg);
+}
+.burguerBottom{
+    transform: translateY(-1rem) rotate(-135deg);
+}
+
+@media (max-width: 1024px){
+    .burguer{
+        display: flex;
+    }
+}
+@media (max-width: 400px){
+    .burguer{
+        right: 1rem;
+    }
+}

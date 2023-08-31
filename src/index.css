@@ -14,6 +14,7 @@ body{
   max-width: 100vw;
   background: var(--bg-color);
 }
+/*ANCHORS*/
 a{
   text-decoration: none;
   color: var(--text-color);
@@ -35,6 +36,19 @@ a{
 }
 .link:hover::before{
   width: 100%;
+}
+.active{
+  pointer-events: none;
+  position: relative;
+}
+.active::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: .1rem;
+  right: 0;
+  bottom: 0;
+  background: var(--primary-color);
 }
 ul{
   list-style: none;
