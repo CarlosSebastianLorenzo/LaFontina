@@ -86,4 +86,6 @@ ul{
 ::-webkit-scrollbar-thumb:hover{
   background: var(--secondary-color);
 }
-
+button{
+  cursor: pointer;
+}

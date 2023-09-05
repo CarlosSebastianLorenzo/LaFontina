@@ -1,5 +1,6 @@
 main{
     min-height: 75vh;
+    background: #e7e7e7;
 }
 .whatsapp{
     position: fixed;
@@ -14,6 +15,7 @@ main{
     justify-content: center;
     align-items: center;
     border: transparent 2px solid;
+    z-index: 1;
 }
 .whatsapp>*{
     scale: 1.6;

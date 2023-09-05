@@ -1,0 +1,63 @@
+{
+    "Picadas": [
+        {
+            "title" : "Tabla Italiana",
+            "photo": "https://lh3.googleusercontent.com/p/AF1QipODF1P2s5FiuBSGUEPTKjLHc5FRyQRHzq1mWE-h=w960-h960-n-o-v1",
+            "description" : "Jamón crudo tipo parma, mortadela al pistacho, trilogía de salames tipo milán, crespon y cantimpalo, queso pategras y holanda en cuñas, mix de nuestros mejores quesos marinados, olivas verdes rellenas, ensalada siciliana, pan flautita recien horneado, mani saborizado y alioli 'La Fontina'.",
+            "price" : 5720,
+            "category": "Come 1, Pican 2"
+        },
+        {
+            "title" : "Tabla Francesa",
+            "photo": "https://lh3.googleusercontent.com/p/AF1QipNNF2mFzevspRGv0bM_gVO6w0TcPld2YiRjiBk4=w960-h960-n-o-v1",
+            "description" : "Queso brie afinado del dia 'La Fontina', morbier, roquefort, mini camembert, gruyere, emmental, marbled, trufas de castañas de caju 'La Fontina', roll de salmon 'La Fontina', pan falutita recien horneado, chutney de peras y manzanas verdes, olivas rellenas 'La Fontina', mix de frutos secos, escabeche de berengenas y Alioli 'La Fontina'.",
+            "price" : 5720,
+            "category": "Come 1, Pican 2"
+        }
+    ],
+    "Sandwiches": [
+        {
+            "title" : "Sándwich de panceta ahumada",
+            "photo": "https://lh3.googleusercontent.com/p/AF1QipPKx8Oz9NS-wm0hUYm9ulMJLRjaR8cCfBcFQ20A=w600-h0",
+            "description" : "Tocino ahumado, vegetales salteados y ahumados, queso tybo y alioli de queso azul.",
+            "price" : 2340,
+            "category": "Come 1, Pican 2"
+        },
+        {
+            "title" : "Sándwich de Salami Peperoni",
+            "photo": "https://lh3.googleusercontent.com/p/AF1QipM_s9NyUp56dB1w87mFuvHdGFJRH9eRINp71N5P=w600-h0",
+            "description" : "Salami Peperoni, queso golden, ajíes amarillos y alioli de ajo negro.",
+            "price" : 2600,
+            "category": "Come 1, Pican 2"
+        },
+        {
+            "title" : "Sándwich De Lengüa A La Vinagreta",
+            "photo": "https://lh3.googleusercontent.com/p/AF1QipPm2s1cBk1nZqC4k46nIgKAErPegMA9aJoo95r_=w600-h0",
+            "description" : "Lengüa a la vinagreta, queso marbled y lechuga repollada.",
+            "price" : 2600,
+            "category": "Come 1, Pican 2"
+        },
+        {
+            "title" : "Sándwich vegetariano",
+            "photo": "https://lh3.googleusercontent.com/p/AF1QipN7Wwqh8MO7x7N2C1bjLPfSB6ndGG36H-7JaU_W=w600-h0",
+            "description" : "Láminas de queso brie, tomate, berenjenas en escabeche y tapenade pasta de olivas.",
+            "price" : 2470,
+            "category": "Come 1, Pican 2"
+        },
+        {
+            "title" : "Sándwich de Pechuga de Pavo",
+            "photo": "https://lh3.googleusercontent.com/p/AF1QipOWeIm02iWgBcU60yKGExarj5kelPa_ocheHr5f=w600-h0",
+            "description" : "Pechuga de pavo feteada, queso tybo, tomate, lechuga repollada, alioli de apio y albahaca.",
+            "price" : 2470,
+            "category": "Come 1, Pican 2"
+        },
+        {
+            "title" : "Sándwich de jamón Asado",
+            "photo": "https://lh3.googleusercontent.com/p/AF1QipM0a8dofUIqTwhLi_pMDqd9bIAEwIJ3e9bWh_32=w600-h0",
+            "description" : "Jamón asado, queso dambo, tomate, lechuga repollada, pepinillos agridulces, Alioli de pimientos asados.",
+            "price" : 2600,
+            "category": "Come 1, Pican 2"
+        }
+    ]
+}
+

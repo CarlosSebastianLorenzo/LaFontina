@@ -1,0 +1,50 @@
+.products{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    padding-top: 2rem;
+    height: 100%;
+}
+.products>div:last-child{
+    display: flex;
+    max-width: 87rem;
+    gap: 1.5rem;
+    align-items: center;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.products input[type="text"]{
+    border-radius: 25px;
+    border: 2px solid var(--primary-color);
+    height: 2rem;
+    width: 20rem;
+    max-width: 80vw;
+    padding-left: 1rem;
+    outline: none;
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+}
+.products div:has(input[type="text"]){
+    position: relative;
+}
+.products div:has(input[type="text"]) label{
+    position: absolute;
+    inset: 0.3em .3em;
+    pointer-events: none;
+    transition: .3s ease-in-out;
+    width: fit-content;
+    border-radius: 25px;
+    padding-right: 1em;
+    padding-left: 1em;
+    font-size: large;
+    font-weight: bolder;
+    color: #777
+}
+.products input[type="text"]:focus + label, input[type="text"]:not(:placeholder-shown) + label {
+    translate: -.5rem -1.8rem;
+    color: var(--primary-color);
+}
