@@ -28,10 +28,18 @@
     display: flex;
     align-items: center;
 }
-.products div:has(input[type="text"]){
+.products>div:has(input[type="text"]){
+    display: flex;
+    gap: 0.5rem;
+    white-space: nowrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.products div:has(>input[type="text"]){
     position: relative;
 }
-.products div:has(input[type="text"]) label{
+.products div:has(>input[type="text"]) label{
     position: absolute;
     inset: 0.3em .3em;
     pointer-events: none;
@@ -42,9 +50,34 @@
     padding-left: 1em;
     font-size: large;
     font-weight: bolder;
-    color: #777
+    color: #777;
+
 }
 .products input[type="text"]:focus + label, input[type="text"]:not(:placeholder-shown) + label {
     translate: -.5rem -1.8rem;
     color: var(--primary-color);
+}
+.products>div:has(input[type="text"])>div{
+    display: flex;
+    gap: 0.5rem;
+    white-space: nowrap;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.category{
+    font-size: 1.3rem;
+    padding: .3rem;
+    font-weight: 600;
+    border-radius: 25px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background: #d7d7d7;
+    color: #777;
+    transition: .5s ease;
+    box-shadow: #77777733 2px 2px 2px;
+    border: 1px solid currentColor;
+}
+.category:hover{
+    color: var(--text-color);
+    background: #ccc;
 }
