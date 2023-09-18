@@ -73,11 +73,21 @@
     padding-right: 1rem;
     background: #d7d7d7;
     color: #777;
-    transition: .5s ease;
+    transition: .3s ease;
     box-shadow: #77777733 2px 2px 2px;
     border: 1px solid currentColor;
 }
 .category:hover{
     color: var(--text-color);
     background: #ccc;
+}
+.category:active{
+    scale: .9;
+}
+.selected{
+    background: #ababab;
+    color: #444
+}
+.selected:hover{
+    background: #999;
 }

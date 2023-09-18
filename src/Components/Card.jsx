@@ -15,7 +15,7 @@ const Card = ({data}) => {
                 <h3>{data.title}</h3>
                 <p>{data.description}</p>
                 <div>
-                    <h3>{data.price.toLocaleString('es-AR', { style: 'currency', currency: 'ARS' })}</h3>
+                    <h3>{data.price?.toLocaleString('es-AR', { style: 'currency', currency: 'ARS' })}</h3>
                     <button onClick={e => e.preventDefault()}>
                         Llevalo
                         <MdOutlineShoppingCartCheckout/>

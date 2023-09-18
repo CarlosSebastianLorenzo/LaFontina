@@ -5,11 +5,10 @@ import './Details.css'
 
 const Details = () => {
     const params = useParams()
-    console.log(params)
     const [product, setProduct] = useState({})
 
     useEffect(()=>{
-        fetch('../../src/Utils/Products.json')
+        fetch('https://apimocha.com/lafontina/picada')
         .then((response) => response.json())
         .then(data => {
             const fetchData = data[`${params.name}`].find(e=>e.title===params.product)

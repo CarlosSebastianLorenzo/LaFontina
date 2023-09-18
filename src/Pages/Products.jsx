@@ -1,75 +1,69 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import './Products.css'
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 import { Link } from "react-router-dom"
 import Card from "../Components/Card"
 import { useParams } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { getProducts, productsByCategory, filterProductsAction } from '../Redux/Actions/productsActions.js'
 
 const Products = () => {
 
     const params = useParams()
-    const [productsArray, setArray] = useState([])
-    const [filterProducts, setFilterProducts] = useState([])
-    const [categoriesArray, setCategoriesArray] = useState([])
+    const dispatch = useDispatch()
+    const search = useRef()
+    const filteredProducts = useSelector(store => store.getProductsReducer.filteredProducts)
+    const classesArray = useSelector(store => store.getProductsReducer.productClasses)
+    const [classesSelected, setClassesSelected] = useState([])
+
     useEffect(()=>{
-        fetch('src/Utils/Products.json')
-        .then((response) => response.json())
-        .then(data => {
-            const dataArray = data[`${params.name}`]
-            if (dataArray == undefined) { 
-                setArray([])
-                setFilterProducts([])
-                setCategoriesArray([])
-                return
-            }
-            setArray(dataArray)
-            setFilterProducts(dataArray)
-            const Categories = dataArray.map(e => e.category)
-            setCategoriesArray([...new Set(Categories)])
-        })
-        .catch(err => console.error(err))
+        if (filteredProducts.length===0){
+            dispatch(getProducts(params.name))
+        }
+        else{
+            dispatch(productsByCategory(params.name, [], ""))
+        }
     },[params])
 
-    const filterByCategory = (category) => {
-        if(category == "All") {setFilterProducts(productsArray)
-        }  
-        else{
-            let filteredArray = productsArray.filter(e => e.category == category)
-            setFilterProducts(filteredArray)
-        }
-    }
+    const filterByClass = (elem) => {
+        if(elem == "All") {setClassesSelected([])}
 
-    const handleSearch = (e)=> {
+        else if (classesSelected.includes(elem)) 
+        {setClassesSelected(classesSelected.filter(e => e !== elem))}
         
-        const search = e.toLowerCase().trim().normalize("NFD").replace(/[\u0300-\u036f]/g, "")
-
-        setFilterProducts(productsArray.filter(e=>{
-            
-            const words = e.description.toLowerCase().trim().normalize("NFD").replace(/[\u0300-\u036f]/g, "").split(' ');
-
-            const searchWords = search.split(' ');
-
-            return searchWords.every(searchWord => words.some(word => word.includes(searchWord)));
-        }))
+        else{setClassesSelected([...classesSelected, elem])}
     }
+
+    const filterProducts = () => {
+        dispatch(filterProductsAction(classesSelected, search.current.value))
+    }
+
+    useEffect(()=>{
+        filterProducts()
+    },[classesSelected])
+
     return (
         <main className="products">
             <div>
                 <div>
-                    <input type="text" name="search" placeholder=" " onChange={(e)=>handleSearch(e.target.value)}/>
+                    <input ref={search} type="text" name="search" placeholder=" " onChange={filterProducts}/>
                     <label htmlFor="search">Filtra por Ingredientes</label>
                 </div>
                 <div>
-                    <button className="category" onClick={()=>filterByCategory("All")}>Todos</button>
+                    <button className={classesSelected.length === 0 ? "selected category" : "category"} 
+                    onClick={()=>filterByClass("All")}>Todos</button>
                 { 
-                    categoriesArray.map((elem, index) => {
-                        return <button className="category" key={index} onClick={()=>filterByCategory(elem)}>{elem}</button>
+                    (classesArray == "" || !classesArray) ? <></> :
+                    classesArray.map((elem, index) => {
+                        return <button className={classesSelected.includes(elem) ? "selected category" : "category"} 
+                        key={index} onClick={()=>filterByClass(elem)}>{elem}</button>
                     })
                 }
                 </div>
             </div>
             <div>
                 {
-                    (filterProducts == "" || !filterProducts) ?
+                    (filteredProducts == "" || !filteredProducts) ?
                     <>
                     <section style={{ display:'flex', flexDirection: 'column', gap: '.5rem' }}>
                         <h1>Ups, <span className="acent">Lo Sentimos,</span></h1>
@@ -77,7 +71,7 @@ const Products = () => {
                     </section>
                     </>
                     :
-                    filterProducts.map((product, indexMap) => {
+                    filteredProducts.map((product, indexMap) => {
                     return <Link to={'/'+params.name+'/'+product.title} key={indexMap}>
                         <Card data={product}></Card>
                     </Link>

@@ -65,210 +65,240 @@
             "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTarsQ9pMrQVBAmveHqrfdE6il3ubHFQH1pteLHSo79vk0wr2RP2YBgUVqfS77MROLUexM&usqp=CAU",
             "description" : "100 g. de queso port salut la paulina.",
             "price" : 365,
-            "category": "Blandos"
+            "category" : "Quesos",
+            "class": "Blandos"
         },
         {
             "title" : "Queso Muzzarella Cilindro",
             "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjHFlxtF4sYnzpE3rRONuzeq1agJBEcRurSOS8cEXmy3NhdmaF7V3UFVB1VA17vcO2eGs&usqp=CAU",
             "description" : "100 g. de queso muzzarella cilindro.",
             "price" : 390,
-            "category": "Blandos"
+            "category" : "Quesos",
+            "class": "Blandos"
         },
         {
             "title" : "Queso Cremoso paulina",
             "photo": "https://www.mejoresdecocina.com/wp-content/uploads/2022/04/Se-puede-congelar-queso-mozzarella-1.jpg",
             "description" : "100 g. de queso cremoso la paulina.",
             "price" : 365,
-            "category": "Blandos"
+            "category" : "Quesos",
+            "class": "Blandos"
         },
         {
             "title" : "Queso Cremoso punta del agua",
             "photo": "https://media.istockphoto.com/id/480194612/es/foto/una-bola-de-queso-mozzarella-rodajas-y-aislado-sobre-rustice.jpg?s=612x612&w=0&k=20&c=h15Xe-ZGmpKa9udoA-1lW83XzqP1a9Z3nIp_w8uazv8=",
             "description" : "100 g. de queso punta del agua.",
             "price" : 400,
-            "category": "Blandos"
+            "category" : "Quesos",
+            "class": "Blandos"
         },
         {
             "title" : "Queso Gruyere",
             "photo": "https://piedrasblancas.com.ar/wp-content/uploads/2019/05/20-GruyereArgentino.jpg",
             "description" : "100 g. de queso gruyere.",
             "price" : 775,
-            "category": "Semi Duros"
+            "category" : "Quesos",
+            "class": "Semi Duros"
         },
         {
             "title" : "Queso Holanda",
             "photo": "https://tusuper.com.ar/image/cache/catalog/P2020/Carnes-Fiambres/Queso-Holanda-Trozo-800x800.jpg",
             "description" : "100 g. de queso holanda.",
             "price" : 550,
-            "category": "Semi Duros"
+            "category" : "Quesos",
+            "class": "Semi Duros"
         },
         {
             "title" : "Queso Emmenthal",
             "photo": "https://media.istockphoto.com/id/476250674/es/foto/ciabatta-con-queso.jpg?s=612x612&w=0&k=20&c=67Jk2ZsYhlfhkGrKzH251sxJ_NOkMmb8vlMDaT53-ws=",
             "description" : "100 g. de queso emmenthal.",
             "price" : 750,
-            "category": "Semi Duros"
+            "category" : "Quesos",
+            "class": "Semi Duros"
         },
         {
             "title" : "Queso Fontina",
             "photo": "https://www.rosalat.com.ar/wp-content/uploads/2021/09/queso-fontina.jpg",
             "description" : "100 g. de queso fontina.",
             "price" : 755,
-            "category": "Semi Duros"
+            "category" : "Quesos",
+            "class": "Semi Duros"
         },
         {
             "title" : "Queso Azul economico",
             "photo": "",
             "description" : "100 g. de queso azul economico.",
             "price" : 495,
-            "category": "Semi Duros"
+            "category" : "Quesos",
+            "class": "Semi Duros"
         },
         {
             "title" : "Queso Azul Bavaria",
             "photo": "",
             "description" : "100 g. de queso azul bavaria.",
             "price" : 810,
-            "category": "Semi Duros"
+            "category" : "Quesos",
+            "class": "Semi Duros"
         },
         {
             "title" : "Queso Pategras Sancor",
             "photo": "",
             "description" : "100 g. de queso pategras sancor.",
             "price" : 805,
-            "category": "Semi Duros"
+            "category" : "Quesos",
+            "class": "Semi Duros"
         },
         {
             "title" : "Queso Pategras",
             "photo": "",
             "description" : "100 g. de queso pategras.",
             "price" : 720,
-            "category": "Semi Duros"
+            "category" : "Quesos",
+            "class": "Semi Duros"
         },
         {
             "title" : "Queso Fymbo",
             "photo": "",
             "description" : "100 g. de queso fymbo.",
             "price" : 820,
-            "category": "Semi Duros"
+            "category" : "Quesos",
+            "class": "Semi Duros"
         },
         {
             "title" : "Queso Criollo",
             "photo": "",
             "description" : "100 g. de queso criollo.",
             "price" : 830,
-            "category": "Semi Duros"
+            "category" : "Quesos",
+            "class": "Semi Duros"
         },
         {
             "title" : "Queso Morbier",
             "photo": "",
             "description" : "100 g. de queso morbier.",
             "price" : 990,
-            "category": "Semi Duros"
+            "category" : "Quesos",
+            "class": "Semi Duros"
         },
         {
             "title" : "Queso Económico p/rallar",
             "photo": "",
             "description" : "100 g. de queso económico para rallar.",
             "price" : 560,
-            "category": "Duros"
+            "category" : "Quesos",
+            "class": "Duros"
         },
         {
             "title" : "Queso Romanito",
             "photo": "",
             "description" : "100 g. de queso romanito.",
             "price" : 625,
-            "category": "Duros"
+            "category" : "Quesos",
+            "class": "Duros"
         },
         {
             "title" : "Queso Sbrinz",
             "photo": "",
             "description" : "100 g. de queso sbrinz.",
             "price" : 675,
-            "category": "Duros"
+            "category" : "Quesos",
+            "class": "Duros"
         },
         {
             "title" : "Queso Parmesano",
             "photo": "",
             "description" : "100 g. de queso parmesano.",
             "price" : 750,
-            "category": "Duros"
+            "category" : "Quesos",
+            "class": "Duros"
         },
         {
             "title" : "Queso Barra Económico tipo Tybo",
             "photo": "",
             "description" : "100 g. de queso barra económico tipo tybo.",
             "price" : 390,
-            "category": "Barra"
+            "category" : "Quesos",
+            "class": "Barra"
         },
         {
             "title" : "Queso Barra Punta del Agua",
             "photo": "",
             "description" : "100 g. de queso barra punta del agua.",
             "price" : 420,
-            "category": "Barra"
+            "category" : "Quesos",
+            "class": "Barra"
         },
         {
             "title" : "Queso Barra Paulina tipo Tybo",
             "photo": "",
             "description" : "100 g. de queso barra paulina tipo tybo.",
             "price" : 480,
-            "category": "Barra"
+            "category" : "Quesos",
+            "class": "Barra"
         },
         {
             "title" : "Queso Barra Paulina tipo Dambo",
             "photo": "",
             "description" : "100 g. de queso barra paulina tipo dambo.",
             "price" : 480,
-            "category": "Barra"
+            "category" : "Quesos",
+            "class": "Barra"
         },
         {
             "title" : "Queso Barra Sancor tipo Dambo",
             "photo": "",
             "description" : "100 g. de queso barra sancor tipo dambo.",
             "price" : 740,
-            "category": "Barra"
+            "category" : "Quesos",
+            "class": "Barra"
         },
         {
             "title" : "Queso Barra Sancor tipo Cheddar Milkaut",
             "photo": "",
             "description" : "100 g. de queso barra tipo cheddar milkaut.",
             "price" : 900,
-            "category": "Barra"
+            "category" : "Quesos",
+            "class": "Barra"
         },
         {
             "title" : "Queso Barra Muzzarella Paulina",
             "photo": "",
             "description" : "100 g. de queso barra muzzarella paulina.",
             "price" : 490,
-            "category": "Barra"
+            "category" : "Quesos",
+            "class": "Barra"
         },
         {
             "title" : "Queso Camembert",
             "photo": "",
             "description" : "100 g. de queso camembert.",
             "price" : 1275,
-            "category": "Especiales"
+            "category" : "Quesos",
+            "class": "Especiales"
         },
         {
             "title" : "Queso Brie",
             "photo": "",
             "description" : "100 g. de queso brie.",
             "price" : 910,
-            "category": "Especiales"
+            "category" : "Quesos",
+            "class": "Especiales"
         },
         {
             "title" : "Queso Provoleta Lista Rosalact",
             "photo": "",
             "description" : "Provoleta condimentada en bandeja de aluminio.",
             "price" : 2210,
-            "category": "Especiales"
+            "category" : "Quesos",
+            "class": "Especiales"
         },
         {
             "title" : "Queso Stracciatella",
             "photo": "",
             "description" : "Crema de queso hilado empaquetado marca mozzari. 200grs.",
             "price" : 2625,
-            "category": "Especiales"
+            "category" : "Quesos",
+            "class": "Especiales"
         }
     ]
 }

@@ -1,10 +1,12 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { RouterProvider, createHashRouter } from 'react-router-dom';
 import MainLayout from './Layouts/MainLayout';
 import Hero from './Pages/Hero';
 import Details from './Pages/Details';
 import Products from './Pages/Products';
+import { Provider } from 'react-redux';
+import store from './Redux/store.js';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: <MainLayout/>,
@@ -28,9 +30,9 @@ const router = createBrowserRouter([
 function App() {
 
   return (
-    <>
+    <Provider store={store}>
     <RouterProvider router={router} />
-    </>
+    </Provider>
   )
 }
 

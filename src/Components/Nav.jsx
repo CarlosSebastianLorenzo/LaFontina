@@ -30,6 +30,13 @@ const Nav = () => {
         </div>
         <nav className={navOpen ? 'navShown' : 'navHidden'} >
             <ul>
+                {/* <li>
+                    <NavLink onClick={()=>setNavOpen(!navOpen)}
+                        className={({isActive})=> isActive ? 'active link' : 'link'}
+                        to='/'>
+                        Inicio
+                    </NavLink>
+                </li> */}
                 {Items.map((item, indexMap)=>{
                     return(
                         <li key={indexMap}>
