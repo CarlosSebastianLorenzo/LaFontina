@@ -1,7 +1,17 @@
 import './Card.css'
 import { MdOutlineShoppingCartCheckout} from 'react-icons/md'
+import { useDispatch } from 'react-redux'
+import { addToCartAction } from '../Redux/Actions/shoppingCartActions'
 
 const Card = ({data}) => {
+
+const dispatch = useDispatch()
+
+const handleClick = (e) => {
+    e.preventDefault()
+    dispatch(addToCartAction(data))
+}
+
     return (
         <div className="card" >
             <div style={{backgroundImage: `url(${data.photo})`}}></div>
@@ -16,7 +26,7 @@ const Card = ({data}) => {
                 <p>{data.description}</p>
                 <div>
                     <h3>{data.price?.toLocaleString('es-AR', { style: 'currency', currency: 'ARS' })}</h3>
-                    <button onClick={e => e.preventDefault()}>
+                    <button onClick={(e)=>handleClick(e)}>
                         Llevalo
                         <MdOutlineShoppingCartCheckout/>
                     </button>

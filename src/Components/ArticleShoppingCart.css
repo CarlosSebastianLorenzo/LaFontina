@@ -1,0 +1,66 @@
+.articleShoppingCart{
+    gap: .5em;
+    width: 100%;
+}
+.articleShoppingCart img{
+    height: 8em;
+    width: 8em;
+    object-fit: cover;
+    border-radius: 25px;
+}
+@media (max-width: 600px) {
+    .articleShoppingCart img{
+        height: 8em;
+        width: 5em;
+    }
+    .articleShoppingCart>div{
+        height: fit-content;
+    }
+}
+.articleShoppingCart>div{
+    flex-direction: column;
+    display: flex;
+    height: 8em;
+    width: 100%;
+    justify-content: space-between;
+    gap:1em;
+}
+.articleShoppingCart>div>div {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    gap: .5em;
+}
+.articleShoppingCart>div>div>div {
+    flex-direction: column;
+    justify-content: space-between;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+.articleShoppingCart>div>div:last-child {
+    justify-content: flex-start;
+    align-items: center;
+    height: fit-content;
+    padding-left: 1em;
+    gap: 1.5em;
+}
+.articleShoppingCart>div>div:last-child button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5em;
+    border-radius: 5px;
+    border: .5px solid #77777777;
+    transition: .3s ease;
+    box-shadow: inset -1px -1px 2px #77777777;
+}
+.articleShoppingCart>div>div:last-child button:hover{
+    background: linear-gradient(135deg,#fff,#e7e7e7);
+}
+.articleShoppingCart>div>div:last-child button:active{
+    background: #eee;
+    box-shadow: inset 1px 1px 2px #77777777;
+    scale: 0.9;
+}

@@ -7,6 +7,18 @@ header{
     padding-right: 1rem;
     padding-left: 1rem;
     align-items: center;
+    background: var(--bg-color);
+    position: relative;
+}
+@media (min-width: 1350px) {
+    header{
+        position: sticky;
+        top: 0;
+        z-index: 3;
+        max-width: 100vw;
+        padding-left: calc((100% - 1350px) / 2 + 1rem);
+        padding-right: calc((100% - 1350px) / 2 + 1rem);
+    }
 }
 header>a{
     display: flex;
@@ -33,6 +45,27 @@ header>ul>li>a{
     align-items: center;
     gap: .5rem;
 }
+header>ul>li:last-child{
+    position: relative;
+}
+li:has(.quantity){
+    position: relative;
+}
+.quantityCart{
+    position: absolute;
+    top: .5em;
+    left: 1em;
+    width: 1.5em;
+    height: 1.5em;
+    background: var(--primary-color);
+    backdrop-filter: blur(20%);
+    color: var(--bg-color);
+    border-radius: 50%;
+    padding: .3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 @media (max-width: 1060px){
     header{
         flex-direction: column;
@@ -51,6 +84,14 @@ header>ul>li>a{
     header>ul{
         gap: .5rem;
         font-size:medium;
-
+    }
+}
+@media (max-width: 380px){
+    header{
+        align-items: flex-start;
+        font-size: .4em;
+    }
+    header>ul{
+        font-size:medium;
     }
 }
