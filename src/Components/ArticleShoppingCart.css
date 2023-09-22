@@ -5,6 +5,7 @@
 .articleShoppingCart img{
     height: 8em;
     width: 8em;
+    min-width: 8em;
     object-fit: cover;
     border-radius: 25px;
 }

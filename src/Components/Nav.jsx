@@ -6,8 +6,26 @@ import BurguerMenu from './BurguerMenu'
 
 const Nav = () => {
 
-    const Items = ["Promos", "Picadas", "Sandwiches", "Quesos", "Fiambres", "Encurtidos", "Snacks", "Bebidas", "Eventos"]
-
+    const Items = [
+        {title : "Promos",
+        photo : '../../public/Promos.png'},
+        {title : "Picadas",
+        photo : '../../public/Picadas.png'},
+        {title : "Sandwiches",
+        photo : '../../public/Sandwiches.png'},
+        {title : "Quesos",
+        photo : '../../public/Quesos.png'},
+        {title : "Fiambres",
+        photo : '../../public/Fiambres.png'},
+        {title : "Encurtidos",
+        photo : '../../public/Encurtidos.png'},
+        {title : "Snacks",
+        photo : '../../public/Snacks.png'},
+        {title : "Bebidas",
+        photo : '../../public/Bebidas.png'},
+        {title : "Eventos",
+        photo : '../../public/Eventos.png'}
+    ]
     const [navOpen, setNavOpen] = useState(false)
 
     const [windowWidth, setWindowWidth] = useState(window.innerWidth)
@@ -42,8 +60,9 @@ const Nav = () => {
                         <li key={indexMap}>
                             <NavLink onClick={()=>setNavOpen(!navOpen)}
                                 className={({isActive})=> isActive ? 'active link' : 'link'}
-                                to={'/'+item}>
-                                {item}
+                                to={'/'+item.title}>
+                                <div className='mask' style={{ WebkitMask: `url(${item.photo}) no-repeat center`, WebkitMaskSize: 'contain'}}></div>
+                                {item.title}
                             </NavLink>
                         </li>
                     )

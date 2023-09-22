@@ -13,7 +13,7 @@
 }
 
 :root{
-  --bg-color: #fff;
+  --bg-color: #e7e7e7;
   --text-color: #071312;
   --primary-color: #8d3035;
   --accent: #a5cc66;
@@ -25,7 +25,18 @@ body{
   min-height: 100vh;
   max-width: 100vw;
   background: var(--bg-color);
+  position: relative;
 }
+/* body::before{
+  content: '';
+  height: 90vh;
+  width: 98vw;
+  right: 2vw;
+  position: fixed;
+  z-index: -1;
+  background: linear-gradient(225deg, transparent, var(--accent2) );
+  border-radius: 20% 30% 250% 20%;
+} */
 /*ANCHORS*/
 a{
   text-decoration: none;

@@ -18,7 +18,7 @@ const Header = () => {
     return (
         <header>
             <Link to='/'>
-                <img src="https://ugc.production.linktr.ee/B3uECQm5Q3K1IektQNyd_ZBrxvfWsvKK53mIf" alt="La Fontina" />
+                <img src="../../public/LaFontinaLogo.png" alt="La Fontina" />
                 <h1>LA FONTINA</h1>
             </Link>
                 <ul>

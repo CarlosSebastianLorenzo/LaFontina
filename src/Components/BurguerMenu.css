@@ -3,7 +3,7 @@
     flex-direction: column;
     gap: .2rem;
     position: relative;
-    top: 1rem;
+    top: 1vh;
     right: 2rem;
     cursor: pointer;
     height: 2.5rem;
@@ -35,7 +35,7 @@
     transform: translateY(-1rem) rotate(-135deg);
 }
 
-@media (max-width: 1060px){
+@media (max-width: 1439px){
     .burguer{
         display: flex;
     }

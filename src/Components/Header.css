@@ -32,6 +32,10 @@ header>a>h1:hover{
 header>a>img{
     height: 100%;
     max-height: 10vh;
+    transition: .5s ease;
+}
+header>a:hover>img{
+    scale: 1.2;
 }
 header>ul{
     display: flex;
@@ -65,6 +69,12 @@ li:has(.quantity){
     display: flex;
     align-items: center;
     justify-content: center;
+    pointer-events:none;
+}
+@media (max-width: 1439px){
+    header{
+        padding-right: 8em;
+    }
 }
 @media (max-width: 1060px){
     header{

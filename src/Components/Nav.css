@@ -1,6 +1,6 @@
 nav{
     background: var(--secondary-color);
-    height: 7vh;
+    min-height: 7vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -8,23 +8,50 @@ nav{
 }
 nav>ul{
     display:flex;
-    flex-wrap: wrap;
-    height: 5vh;
+    flex-wrap: nowrap;
+    min-height: 5vh;
     font-weight: 600;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5em;
+    /* padding-top: .2em;
+    padding-bottom: .2em; */
 }
 nav>ul>li>a{
-    padding-bottom: .2em;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 2em;
+    font-size: 1.5em;
     font-weight: bold;
-    font-size: 1.5rem;
 }
+nav>ul>li>a:hover .mask{
+    background: var(--primary-color);
+}
+.active>.mask{
+    background: var(--primary-color);
+}
+.mask{
+    position: absolute;
+    top: 0.2em;
+    left: 0;
+    translate: -125% -25%;
+    width: 1.5em;
+    height: 1.5em;
+    background: #000;
+    object-fit: cover;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}
+.mask_active{
+    background: var(--primary-color);
+}
+
 div:has(>.burguer){
     display: none;
 }
 
-@media (max-width: 1060px){
+@media (max-width: 1439px){
     nav{
         position: fixed;
         z-index: 3;
@@ -48,16 +75,33 @@ div:has(>.burguer){
     nav>ul{
         flex-wrap: nowrap;  
         align-items: center;
-        justify-content: flex-start;
-        padding-top: 4rem;
+        align-items: flex-start;
+        padding-left: 3em; 
+        padding-top: 4em;
+        gap: 2em;
         flex-direction: column;
-        transition: 3 ease;
-        max-height: 100%;
+        height: fit-content;
+        overflow-y: scroll;
+        max-height: 100vh;
+        transition: 1 ease;
+        width: 100vw;
+    }
+    nav>ul::-webkit-scrollbar{
+        width: .3em;
+        height: .3em;
+    }
+    nav>ul::-webkit-scrollbar-corner{
+        display: none;
+    }
+    nav>ul::-webkit-scrollbar-track {
+        display: none;
     }
     nav a{
-        color: #fff;
         font-weight: bolder;
-        font-size: 3rem;
+        font-size: 5em;
+    }
+    .mask{
+        translate: -150% -25%;
     }
     div:has(>.burguer){
         display: block;
