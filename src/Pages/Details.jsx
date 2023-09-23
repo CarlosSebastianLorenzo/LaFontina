@@ -2,26 +2,44 @@ import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { MdOutlineShoppingCartCheckout } from 'react-icons/md'
 import './Details.css'
+import { useDispatch, useSelector } from 'react-redux'
+import { getProducts, productsByCategory } from '../Redux/Actions/productsActions.js'
+import Loader from "../Components/Loader"
+import { addToCartAction } from '../Redux/Actions/shoppingCartActions'
 
 const Details = () => {
+    const loading = useSelector(store => store.getProductsReducer.loading)
+    const filteredProducts = useSelector(store => store.getProductsReducer.filteredProducts)
+    const dispatch = useDispatch()
     const params = useParams()
     const [product, setProduct] = useState({})
 
     useEffect(()=>{
-        fetch('https://apimocha.com/lafontina/picada')
-        .then((response) => response.json())
-        .then(data => {
-            const fetchData = data[`${params.name}`].find(e=>e.title===params.product)
-            if (fetchData == undefined) { 
+        if (filteredProducts.length===0){
+            dispatch(getProducts(params.name))
+        }
+        else{
+            dispatch(productsByCategory(params.name, [], ""))
+        }
+        const data = filteredProducts.find(e=>e.title===params.product)
+            if (data == undefined) { 
                 setProduct({})
                 return
             }
-            setProduct(fetchData)
-        })
-        .catch(err => console.error(err))
-    },[])
+            setProduct(data)
+    },[loading, params])
 
-    // if ( product == undefined || product == {}) { return <></>}
+    const handleClick = () => {
+        if(Object.keys(product).length!==0){
+            dispatch(addToCartAction(product))
+        }
+    }
+
+    if (loading) {
+        return(
+            <Loader/>
+        )
+    }
 
     return (
         <main>
@@ -38,7 +56,7 @@ const Details = () => {
                     <h3>{product.description}</h3>
                     <div>
                         <h2>{product.price?.toLocaleString('es-AR', { style: 'currency', currency: 'ARS' })}</h2>
-                        <button onClick={e => e.preventDefault()}>
+                        <button onClick={handleClick}>
                             Llevalo
                             <MdOutlineShoppingCartCheckout/>
                         </button>

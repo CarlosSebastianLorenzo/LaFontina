@@ -7,12 +7,14 @@ import { useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { getProducts, productsByCategory, filterProductsAction } from '../Redux/Actions/productsActions.js'
 import Dropdown from '../Components/Dropdown'
+import Loader from '../Components/Loader'
 
 const Products = () => {
 
     const params = useParams()
     const dispatch = useDispatch()
     const search = useRef()
+    const loading = useSelector(store => store.getProductsReducer.loading)
     const filteredProducts = useSelector(store => store.getProductsReducer.filteredProducts)
     const classesArray = useSelector(store => store.getProductsReducer.productClasses)
     const [classesSelected, setClassesSelected] = useState([])
@@ -42,6 +44,8 @@ const Products = () => {
     useEffect(()=>{
         filterProducts()
     },[classesSelected])
+    
+    if (loading) return <Loader/>
 
     return (
         <main className="products">

@@ -2,12 +2,10 @@ import React, { useState, useEffect } from 'react'
 import { BsChevronDown, BsChevronUp} from 'react-icons/bs'
 import { useDispatch } from 'react-redux'
 import { sortProductsAction } from '../Redux/Actions/productsActions.js'
-import { useParams } from 'react-router-dom'
 import './Dropdown.css'
 
 const Dropdown = () => {
     const dispatch = useDispatch()
-    const params = useParams()
     const array = ["Precio", "Nombre", "Categoría"]
     const [isVisibleDropdown, setIsVisibleDropdown] = useState(false)
     const [order, setOrder] = useState({
@@ -20,7 +18,7 @@ const Dropdown = () => {
             field: "Precio",
             order: "asc"
         })
-    },[params])
+    },[])
 
     const handleClick = (field, order) => {
         dispatch(sortProductsAction(field, order))

@@ -7,7 +7,12 @@ const initialState = {
     allProducts : [],
     productsByCategory : [],
     filteredProducts : [],
-    productClasses : []
+    productClasses : [],
+    loading: false,
+    sortedProductsBy: {
+        field: "Precio",
+        order: "asc"
+    }
 }
 
 export const getProductsReducer = createReducer(initialState, (builder)=>{
@@ -15,10 +20,13 @@ export const getProductsReducer = createReducer(initialState, (builder)=>{
         .addCase(getProducts.pending,(store)=>{
             return {
                 ...store,
-                    allProducts : [],
-                    productsByCategory : [],
-                    filteredProducts : [],
-                    productClasses : []
+                loading: true
+            }
+        })
+        .addCase(getProducts.rejected,(store)=>{
+            return {
+                ...store,
+                loading: false
             }
         })
         .addCase(getProducts.fulfilled,(store,action)=>{
@@ -26,7 +34,7 @@ export const getProductsReducer = createReducer(initialState, (builder)=>{
             let array = action.payload.array
             const filteredArray = array.filter(e => e.category.title == action.payload.category)
 
-            const sortedArray = sortProducts(filteredArray, "Precio", "asc")
+            const sortedArray = sortProducts(filteredArray, store.sortedProductsBy.field, store.sortedProductsBy.order)
 
             const haveClass = filteredArray.filter(e => e.class)
             const classes = haveClass.map(e => e.class)
@@ -37,13 +45,14 @@ export const getProductsReducer = createReducer(initialState, (builder)=>{
                 allProducts: array,
                 productsByCategory: sortedArray,
                 filteredProducts: sortedArray,
-                productClasses : classesWithoutRepeated
+                productClasses : classesWithoutRepeated,
+                loading: false
             }
         })
         .addCase(productsByCategory, (store,action)=>{
             const filteredArray = store.allProducts.filter(e => e.category.title == action.payload.category)
 
-            const sortedArray = sortProducts(filteredArray, "Precio", "asc")
+            const sortedArray = sortProducts(filteredArray, store.sortedProductsBy.field, store.sortedProductsBy.order)
 
             const haveClass = filteredArray.filter(e => e.class)
             const classes = haveClass.map(e => e.class)
@@ -62,9 +71,11 @@ export const getProductsReducer = createReducer(initialState, (builder)=>{
         
             const filteredArray = filterBySearch(filteredByClass, action.payload.searchMatches)
 
+            const sortedArray = sortProducts(filteredArray, store.sortedProductsBy.field, store.sortedProductsBy.order)
+
             return {
                 ...store,
-                filteredProducts: filteredArray
+                filteredProducts: sortedArray
             }
         })
         .addCase(sortProductsAction, (store,action)=>{
@@ -73,7 +84,11 @@ export const getProductsReducer = createReducer(initialState, (builder)=>{
 
             return {
                 ...store,
-                filteredProducts: sortedArray
+                filteredProducts: sortedArray,
+                sortedProductsBy: {
+                    field: action.payload.field,
+                    order: action.payload.order
+                }
             }
         })
     })

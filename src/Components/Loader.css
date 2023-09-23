@@ -1,0 +1,45 @@
+.loader {
+    position:relative;
+    margin: auto;
+    margin-top: 30vh;
+    width: fit-content;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 5em;
+    background: radial-gradient(circle closest-side,var(--primary-color) 94%,#0000) right/calc(200% - 1em) 100%;
+    animation: loading 1s infinite alternate linear;
+}
+
+.loader::before {
+    content: "Loading...";
+    line-height: 1em;
+    color: #0000;
+    background: inherit;
+    background-image: radial-gradient(circle closest-side,var(--accent) 94%,var(--text-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+@keyframes loading {
+    100% {
+        background-position: left
+    }
+}
+.loader>div {
+    font-size: 1em;
+    translate: -1.5em -.5em;
+    animation: rotation 1s linear infinite;
+}
+@keyframes rotation {
+    25% {
+        transform: rotate(5deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+} 
+@media (max-width: 768px) {
+    .loader>div {
+        translate: 1.3em -2em;
+    }
+}
